@@ -1,10 +1,10 @@
-import CartValue from '@/components/CartValue'
+import ExpenseList from '@/components/ExpenseList'
 import './App.css'
 
 function App() {
   return (
     <>
-     <CartValue />
+     <ExpenseList />
     </>
   )
 }
