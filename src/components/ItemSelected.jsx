@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { AppContext } from "@/context/AppContext";
 
-const ItemSelected = (props) => {
+const ItemSelected = () => {
   const { dispatch } = useContext(AppContext);
 
   const [name, setName] = useState("");
