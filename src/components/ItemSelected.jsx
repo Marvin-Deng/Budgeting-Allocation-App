@@ -28,12 +28,12 @@ const ItemSelected = (props) => {
   };
 
   return (
-    <div>
+    <div style={{ display: "flex", justifyContent: "center" }}>
       <div className="row">
         <div className="input-group mb-3" style={{ marginLeft: "2rem" }}>
           <div className="input-group-prepend">
             <label className="input-group-text" htmlFor="inputGroupSelect01">
-              Items
+              Department
             </label>
           </div>
           <select
@@ -42,27 +42,27 @@ const ItemSelected = (props) => {
             onChange={(event) => setName(event.target.value)}
           >
             <option defaultValue>Choose...</option>
-            <option value="Shirt" name="Shirt">
+            <option value="Marketing" name="Marketing">
               {" "}
-              Shirt
+              Marketing
             </option>
-            <option value="Dress" name="Dress">
-              Dress
+            <option value="Finance" name="Finance">
+              Finance
             </option>
-            <option value="Jeans" name="Jeans">
-              Jeans
+            <option value="Sales" name="Sales">
+              Sales
             </option>
-            <option value="Dinner set" name="Dinner set">
-              Dinner set
+            <option value="Human Resources" name="Human Resources">
+              Human Resources
             </option>
-            <option value="Bags" name="Bags">
-              Bags
+            <option value="IT" name="IT">
+              IT
             </option>
           </select>
 
           <div className="input-group-prepend" style={{ marginLeft: "2rem" }}>
             <label className="input-group-text" htmlFor="inputGroupSelect02">
-              Quantity
+              Change
             </label>
           </div>
           <select
