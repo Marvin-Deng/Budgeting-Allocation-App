@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import { AppContext } from "@/context/AppContext";
+import { toast, Toaster } from "react-hot-toast";
 
 const CartValue = () => {
   const { expenses, dispatch, Location } = useContext(AppContext);
@@ -25,17 +26,27 @@ const CartValue = () => {
     fontWeight: "bold",
   };
 
+  const handleBudgetChange = (event) => {
+    const newBudget = event.target.value;
+
+    if (newBudget > 20000) {
+      toast.error("Budget cannot exceed 20000");
+    } else if (newBudget < totalExpenses) {
+      toast.error("Budget cannot be lower than total spending");
+    } else {
+      setBudget(newBudget);
+    }
+  };
+
   return (
     <>
       <h2 style={{ marginTop: "80px" }}>Expense Tracker</h2>
-      <div
-        style={{ display: "flex", justifyContent: "center" }}
-      >
+      <div style={{ display: "flex", justifyContent: "center" }}>
         <div
           style={{ ...backgroundStyle, display: "flex", alignItems: "center" }}
         >
           <label htmlFor="cost" style={{ marginRight: "10px" }}>
-            Budget:
+            Budget: {Location}
           </label>
           <input
             required="required"
@@ -43,7 +54,7 @@ const CartValue = () => {
             id="cost"
             value={budget}
             style={{ fontWeight: "bold" }}
-            onChange={(event) => setBudget(event.target.value)}
+            onChange={handleBudgetChange}
           />
         </div>
         <div style={{ ...backgroundStyle, width: "300px" }}>
@@ -71,6 +82,7 @@ const CartValue = () => {
           </select>
         </div>
       </div>
+      <Toaster />
     </>
   );
 };
