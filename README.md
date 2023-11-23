@@ -1,8 +1,3 @@
-# React + Vite
+# Budgeting Allocation App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This is the final project for IBM's Developing Front End Apps with React course. This project emphasizes the use of Redux for effective state management, allowing users to seamlessly track their expenses and manage their budgets. Users can easily add, edit, and delete expenses to keep a detailed record of spending and set monthly budgets for different categories and monitor expenses against budgets. 
